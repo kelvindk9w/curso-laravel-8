@@ -18,3 +18,13 @@ Route::any('/post/search', [PostController::class, 'search'])->name('posts.searc
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function() {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+require __DIR__.'/auth.php';
