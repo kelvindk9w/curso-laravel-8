@@ -27,6 +27,8 @@
 
 @foreach ($posts as $post)
 <p>
+    <img src="{{ url("storage/{$post->image}") }}" alt="{{ $post->title }}" width="100" >
+    <br><br>
     <strong>Título: {{ $post->title }} </strong>
     <br><br>
     {{ $post->content }}
